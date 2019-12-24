@@ -1,0 +1,6 @@
+@mixin empty-block($n) {
+  content: "";
+  display: block;
+  height: 100px;
+  width: 101px * $n;
+}
