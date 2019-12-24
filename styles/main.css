@@ -18,8 +18,7 @@ body {
   width: 707px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 0 auto; }
 
 .calendar-28 div:nth-child(1) {
   content: "1";
@@ -2381,12 +2380,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px; }
 
-.calendar div:hover {
-  cursor: pointer;
-  background-color: pink;
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px); }
-
 .calendar-mon::before {
   content: "";
   display: block;
@@ -2399,7 +2392,7 @@ body {
   height: 100px;
   width: 101px; }
 
-.calendar-wed::before {
+.calendar-wen::before {
   content: "";
   display: block;
   height: 100px;
@@ -2428,5 +2421,11 @@ body {
   display: block;
   height: 100px;
   width: 606px; }
+
+.calendar div:hover {
+  cursor: pointer;
+  background-color: pink;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px); }
 
 /*# sourceMappingURL=main.css.map */
