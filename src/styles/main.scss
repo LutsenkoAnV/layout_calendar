@@ -1,5 +1,4 @@
 @import "variables";
-@import "mixins";
 
 html,
 body {
@@ -18,8 +17,7 @@ body {
   display: flex;
   width: 707px;
   flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 @each $day in $days {
@@ -47,36 +45,17 @@ body {
   }
 }
 
+@each $weekday, $number in $weekdays {
+  .calendar-#{$weekday}::before {
+    content: "";
+    display: block;
+    height: 100px;
+    width: #{$number*101px};
+  }
+}
+
 .calendar div:hover {
   cursor: pointer;
   background-color: pink;
   transform: translateY(-20px);
-}
-
-.calendar-mon::before {
-  @include empty-block(0);
-}
-
-.calendar-tue::before {
-  @include empty-block(1);
-}
-
-.calendar-wed::before {
-  @include empty-block(2);
-}
-
-.calendar-thu::before {
-  @include empty-block(3);
-}
-
-.calendar-fri::before {
-  @include empty-block(4);
-}
-
-.calendar-sat::before {
-  @include empty-block(5);
-}
-
-.calendar-sun::before {
-  @include empty-block(6);
 }
